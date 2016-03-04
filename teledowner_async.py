@@ -11,7 +11,7 @@ async def tele_down(url, loop):
         hour = datetime.datetime.now().time().hour
         if (hour in range(0, 7)) or (hour >= 23):
             if not in_progress:
-                print("Zeekwat Starting Download Process")
+                print("Zeekwat Active!Starting Download Process")
                 process = asyncio.create_subprocess_shell("wget %s" % url)
                 await process
                 in_progress = True
